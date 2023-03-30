@@ -1,0 +1,106 @@
+html,
+body {
+  height: 100%;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  font-size: 35px;
+
+  font-family: "Rajdhani", sans-serif;
+  font-weight: bolder;
+}
+form,
+.grid-body,
+.grid-container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: -80px;
+}
+.grid-container {
+  margin-bottom: -250px;
+}
+
+.turn {
+  font-size: 30px;
+
+  font-family: "Alkatra", cursive;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: bold;
+  margin-top: 60px;
+}
+.grid {
+  display: grid;
+  margin-top: -250px;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.grid > div {
+  border: 3px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  font-size: 70px;
+  cursor: pointer;
+}
+.button-box {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+button {
+  height: 60px;
+  width: 130px;
+  font-size: 20px;
+  font-family: "Alkatra", cursive;
+  font-family: "Rajdhani", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.box {
+  font-family: "Alkatra", cursive;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: bolder;
+}
+.turn.win {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+.turn.draw {
+  animation: glow2 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    background-color: #66ff99;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+@keyframes glow2 {
+  from {
+    background-color: yellow;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  font-size: 100px;
+}
